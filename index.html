@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>محاكاة الكتلة</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>محاكاة الكتلة</h1>
+
+    <div class="main-area">
+      <div class="item-panel">
+        <img src="images/iron_cube.png" class="draggable" data-item="iron_cube" alt="مكعب حديد">
+        <img src="images/orange.png" class="draggable" data-item="orange" alt="برتقالة">
+        <img src="images/wood_cylinder.png" class="draggable" data-item="wood_cylinder" alt="أسطوانة خشب">
+      </div>
+
+      <div class="scale-area">
+        <img src="images/scale.png" id="scale" alt="ميزان">
+        <div class="display">
+          <label>الكتلة</label>
+          <div class="box kg">🔢 <span id="kg-value">0.000</span> كجم</div>
+          <div class="box g">🔷 <span id="g-value">0.00</span> جم</div>
+        </div>
+      </div>
+
+      <div class="info-area">
+        <div class="box items">🔴 عدد المواد: <span id="item-count">0</span></div>
+        <ul id="material-list"></ul>
+        <button onclick="resetScale()">🔁 إعادة تعيين</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="drop-sound" src="audio/drop.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
